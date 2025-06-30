@@ -1,0 +1,27 @@
+python server run command =python manage.py runserver
+change directory command = cd folder name
+## creating a new app - python manage.py startapp newappName
+
+## data base running command - python manage.py makemigrations
+python manage.py migrate
+## for inserting data command = python .\manage.py shell 
+
+## from website.models import Student
+## for saving student data - use student.save()
+## hoe to save data -student  object banan h data dalna h save karna h 
+## cmd for creating a super user - python .\manage.py createsuperuser
+#Empolyee management system
+
+""" username -Geet1205
+password -Geet
+email -jaingeet@gmail.com"""
+""" when we write a password it not show why - beacause 
+Python की input handling getpass module से होती है, जो input को छुपाता है।"""
+ADD 
+View 
+Delete 
+Update
+# we use MVT here
+
+static files in django -https://docs.djangoproject.com/en/5.2/howto/static-files/
+

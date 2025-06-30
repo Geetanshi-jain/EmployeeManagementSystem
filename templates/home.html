@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Official Website</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <!-- Including the navbar -->
+        {% include 'navbar.html' %}
+        
+        <h1 class="text-center my-3">employee Management</h1>
+        <h1 class="text-center my-3">List Of Employee</h1>
+        
+
+
+        <form action="/home/" method="POST">
+             {% csrf_token %}
+            <input type ="text" name="check">
+           
+            <button type ="submit">send</button>
+            </form>
+
+            {% if check_value %}
+    <p>You entered: {{ check_value }}</p>
+{% endif %}
+
+        <!-- Accessing dynamic data -->
+        <h2>Today's date is: {{ date }}</h2>
+
+        <!-- Example: showing status -->
+        {% if isActive %}
+            <p>Status: <strong>Active</strong></p>
+        {% else %}
+            <p>Status: <strong>Inactive</strong></p>
+        {% endif %}
+
+        <!-- Programs list -->
+        <h2>Programs List:</h2>
+        <ul>
+            {% for item in list_of_programs %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Student Info -->
+        <h2>Student Info:</h2>
+        <p>Name: {{ student_data.student_name }}</p>
+        <p>College: {{ student_data.student_college }}</p>
+        <p>City: {{ student_data.student_city }}</p>
+    </div>
+    
+
+
+</body>
+</html>
